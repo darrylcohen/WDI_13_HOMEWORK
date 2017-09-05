@@ -12,4 +12,5 @@ var isPlaindrome = function(aString) {
   return result;
 }
 
-console.log(isPlaindrome('madam Im Adam'));
+console.log('madam Im Adam ' + isPlaindrome('madam Im Adam'));
+console.log('hello goodbye ' + isPlaindrome('hello goodbye '));
