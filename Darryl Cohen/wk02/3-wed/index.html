@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>ONLINE BANKING</h1>
+  </header>
+  <main>
+    <div class="atm">
+      <h2>SAVINGS</h2>
+      <h2>Your Balance Is</h4>
+      <div id="savBal" class="balance">
+        0
+      </div>
+      <input id="savAmount" class="inputAmounts" type="text" placeholder='Enter an Amount'>
+      <div class="actions">
+        <button id="savWithBtn">Withdraw</button>
+        <button id="savDepBtn">Deposit</button>
+      </div>
+      <div id='savMessage' class="message">
+        G'Day
+      </div>
+    </div>
+    <div class="atm">
+      <h2>Checking</h2>
+      <h2>Your Balance Is</h4>
+      <div id="chqBal" class="balance">
+        0
+      </div>
+      <input id="chqAmount" class="inputAmounts" type="text" placeholder='Enter an Amount'>
+      <div class="actions">
+        <button id="chqWithBtn">Withdraw</button>
+        <button id="chqDepBtn">Deposit</button>
+      </div>
+      <div id='chqMessage' class="message">
+        G'Day
+      </div>
+    </div>  </main>
+  <script src="app.js"></script>
+</body>
+</html>

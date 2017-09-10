@@ -1,0 +1,4 @@
+.switch {
+ transform: scaleX(-1);
+ /*transition: 4s;*/
+}

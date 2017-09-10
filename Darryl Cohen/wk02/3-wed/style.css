@@ -1,0 +1,53 @@
+
+body {
+  background: url("http://www.foresthillchase.com.au/uploads/images/stores/anz-bank.jpg");
+  background-repeat:repeat;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin:0;
+}
+header {
+  text-align: center;
+  background-color: darkblue;
+  letter-spacing: 1em;
+  font-weight:bolder;
+  font-size: 1.5em;
+
+}
+h1 {
+    margin:0;
+    padding: 1em 0;
+}
+h2 {
+  letter-spacing: 0.2em;
+}
+main {
+  text-align: center;
+}
+.balance {
+  padding-bottom: 20px;
+  font-size: 200%;
+
+
+}
+.message {
+  font-size:1.5em;
+}
+.atm {
+  border:3px solid blue;
+  background-color: midnightblue;
+  width:40%;
+  margin: 6em auto;
+  display:inline-block;
+  vertical-align: top;
+}
+.actions {
+  padding: 2em 0;
+}
+button {
+  font-size: 140%;
+
+}
+.inputAmounts {
+  font-size: 120%;
+}
