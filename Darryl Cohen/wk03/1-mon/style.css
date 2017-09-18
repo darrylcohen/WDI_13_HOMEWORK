@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.letters, .usedLetters, .lives, .word{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.letter {
+  color:white;
+  background-color: black;
+  width:60px;
+  height: 60px;
+  font-size:200%;
+  text-align: center;
+  margin:5px;
+  line-height: 60px;
+
+}
+
+
+h2 {
+  text-align: center;
+}
