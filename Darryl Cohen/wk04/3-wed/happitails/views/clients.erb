@@ -1,0 +1,14 @@
+<div class="">
+  <ul>
+  <% @clients.each do |client| %>
+    <li> '<%= client.to_s %>' </li>
+
+  <% end %>
+  </ul>
+  <form class="" action="/add_client" method="get">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="children" placeholder="Num Children">
+    <input type="text" name="age" placeholder="Age">
+    <button type="submit" name="button">Submit</button>
+  </form>
+</div>

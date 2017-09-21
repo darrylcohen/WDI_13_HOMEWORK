@@ -1,0 +1,21 @@
+<div class="">
+  <h3>Animals</h3>
+  <ul>
+  <% @animals.each do |animal| %>
+    <li> '<%= animal.to_s %>' </li>
+
+  <% end %>
+  </ul>
+  <h3>Clients</h3>
+  <ul>
+  <% @clients.each do |client| %>
+    <li> '<%= client.to_s %>' </li>
+
+  <% end %>
+  </ul>
+  <form class="" action="/adopt" method="get">
+    <input type="text" name="animal_name" placeholder="Animal Name">
+    <input type="text" name="client_name" placeholder="Client Name">
+    <button type="submit" name="button">Submit</button>
+  </form>
+</div>

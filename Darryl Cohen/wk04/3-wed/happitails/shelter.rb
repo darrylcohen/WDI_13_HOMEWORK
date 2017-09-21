@@ -5,6 +5,23 @@ class Shelter
     @address = address
     @animals =[]
     @clients = []
+
+    add_animal Animal.new 'Fluffy', 2, 'male', 'dog'
+    add_animal Animal.new 'Rusty', 5, 'male', 'dog'
+    add_animal Animal.new 'Felix', 7, 'male', 'cat'
+    add_animal Animal.new 'Tweety', 2, 'male', 'bird'
+
+    add_client Client.new 'Darryl', 3, 48
+    add_client Client.new 'Trevor', 1, 20
+    add_client Client.new 'Clive', 3, 38
+  end
+
+  def get_animals
+    @animals
+  end
+
+  def get_clients
+    @clients
   end
 
   def display_clients
