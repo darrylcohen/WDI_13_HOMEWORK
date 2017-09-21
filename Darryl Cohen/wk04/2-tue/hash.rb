@@ -3,15 +3,15 @@ require 'pry'
 users = {
   "Jonathan" => {
     :twitter => "tronathan",
-    :favorite_numbers => [12, 42, 75],
+    :favorite_numbers => [9, 12, 42, 75],
   },
   "Erik" => {
     :twitter => "sferik",
-    :favorite_numbers => [8, 12, 24],
+    :favorite_numbers => [8, 9, 12, 24],
   },
   "Anil" => {
     :twitter => "bridgpal",
-    :favorite_numbers => [12, 14, 85],
+    :favorite_numbers => [12, 9, 14, 85],
   },
 }
 
@@ -24,7 +24,7 @@ users['Erik'][:favorite_numbers].push(7)
 #How would you add yourself to the users hash?
 users['Darryl'] = {
   :twitter => "dddddd",
-  :favorite_numbers => [11,23,32]
+  :favorite_numbers => [9, 12,23,32]
 }
 
 #How would you return the array of Erik's favorite numbers?
@@ -37,14 +37,12 @@ users['Erik'][:favorite_numbers].min
 users['Anil'][:favorite_numbers].select {|num| num.even?}
 
 #How would you return an array of the favorite numbers common to all users?
-fav_nums = []
+fav_nums = users['Erik'][:favorite_numbers]
 users.each_value do |user |
-  # user[:favorite_numbers]
-  fav_nums = fav_nums.push(user[:favorite_numbers])
-  # puts user[:favorite_numbers]
-end
-fav_nums = fav_nums.flatten.uniq
+  fav_nums = fav_nums & user[:favorite_numbers]
 
+end
+puts "fav #{fav_nums}"
 
 #How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
 fav_nums = []
