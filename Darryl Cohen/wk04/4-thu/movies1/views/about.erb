@@ -1,0 +1,9 @@
+<div class="">
+  <h2> <%= @movie %> </h2>
+  <ul>
+  <% @result.each do |movie| %>
+    <li><a href='<%= "/movie_details?title=#{movie['Title']}" %>'><%= movie['Title'] %></a></li>
+
+  <% end %>
+  </ul>
+</div>

@@ -72,7 +72,7 @@ def start
   a_shelter = Shelter.new 'HappyTails', '12A/45 Williams Street'
   puts "Welcome to the Animal Shelter\n"
 
-  choice = ''
+  choice = 'ß'
   while choice != 'exit' do
     list_menu
     print "\nEnter Option : "

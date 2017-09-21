@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+.moviepics {
+  display:flex;
+  justify-content: space-around;
+  background-color: black;
+}
+.moviepics img {
+  width:200px;
+  height: 200px;
+
+}
+
+.container {
+  width:70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  font-size: 150%;
+}
+input {
+  font-size: 150%;
+}
+ul {
+  list-style-type: none;
+}
