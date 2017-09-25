@@ -64,5 +64,5 @@ get '/return' do
   @animals = a_shelter.get_animals
   @clients = a_shelter.get_clients
 
-  erb :return
+  erb :returnh
 end

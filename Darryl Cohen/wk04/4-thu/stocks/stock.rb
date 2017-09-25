@@ -3,6 +3,8 @@ require 'sinatra/reloader'
 require 'pry'
 require 'yahoofinance'
 
+require 'httparty'
+
 get '/' do
   erb :index
 end
@@ -12,6 +14,6 @@ get '/get_stock' do
   result = YahooFinance::get_quotes(YahooFinance::StandardQuote, @stock)
   @last_price = result[@stock].lastTrade
   @day_range = result[@stock].dayRange
-  
+
   erb :display_stock
 end

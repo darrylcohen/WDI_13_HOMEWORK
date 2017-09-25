@@ -38,6 +38,6 @@ class Client
   end
 
   def to_s
-    "Name : #{@name}, Number of Children : #{@num_children}, Age : #{@age}, I have #{@pets.size} pets. \nPets : #{@pets.join(', ')}"
+    "Name : #{@name}, Number of Children : #{@num_children}, Age : #{@age}, I have #{@pets.size} pets. <br>Pets : #{@pets.join(', ')}"
   end
 end
