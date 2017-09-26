@@ -1,0 +1,10 @@
+<form class="" action="/teams/<%= @team['id'] %>" method="post">
+
+<!-- The next line is so server knows we updating -->
+  <input type="hidden" name="_method" value="put">
+
+  <input type="text" name="name" value="<%= @team['name'] %>">
+  <textarea name="image_url" rows="8" cols="80"><%= @team['image_url'] %></textarea>
+  <button type="submit" name="button">Update</button>
+
+</form>

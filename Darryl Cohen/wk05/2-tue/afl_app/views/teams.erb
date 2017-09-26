@@ -1,0 +1,16 @@
+
+<div class="teams">
+  <a href="/teams/new">New Team</a>
+
+  <% @teams.each do |team| %>
+    <form class="" action="/teams/<%= team['id'] %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <button type="submit" >DELETE</button>
+    </form>
+    <a href="/teams/<%= team['id'] %>/edit">Edit</a>
+    <h2>
+      <a href="/teams/<%= team['id'] %>"><%= team['name'] %></a>
+    </h2>
+    <img src="<%= team['image_url'] %>" alt="">
+  <% end %>
+</div>
