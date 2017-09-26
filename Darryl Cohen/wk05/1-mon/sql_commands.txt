@@ -7,5 +7,5 @@
 7. SELECT avg(age) FROM players WHERE games > 40;
 8. select team, sum(points) from players GROUP BY team ORDER by sum(points) DESC;
 
-1. SELECT age, avg(points) FROM players GROUP BY age ORDER BY age ASC
-2. SELECT team, count(name) FROM players GROUP BY team HAVING sum(points) > 12 ORDER BY count DESC;
+1. SELECT age, avg(points) FROM players GROUP BY age ORDER BY age ASC"
+2. SELECT distinct team, count(name), sum(points)/sum(games) as "Points per Game" from players group by team HAVING sum(points)/sum(games) > 12 ;
