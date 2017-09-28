@@ -22,6 +22,7 @@ get '/about' do
   if @result == nil
     redirect '/'
   elsif @result.length == 1
+    binding.pry
     redirect "/movie_details?title=#{@result[0]['Title']}"
   else
     erb :about

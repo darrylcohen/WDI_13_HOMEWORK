@@ -1,0 +1,31 @@
+Show all teams
+      route get /teams
+      erb :teams
+
+Select a team
+      route get /teams/:id
+      erb :show
+
+Edit a team
+      route get /teams/:id/edit
+      erb: edit
+
+Update a team
+      <form class="" action="/teams/<%= @team['id'] %>" method="post">
+      <input type="hidden" name="_method" value="put">
+      route put /teams/:id
+      redirect /teams
+
+New team
+      route get teams/new
+      erb: new
+
+      <form class="" action="/teams" method="post">
+      route post teams/
+      redirect '/teams'
+
+Delete a Team
+      <form class="" action="/teams/<%= @team['id'] %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      route delete teams/:id
+      redirect '/teams'
