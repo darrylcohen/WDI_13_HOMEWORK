@@ -15,16 +15,10 @@ get '/movies' do
   @movie = params[:movie]
   @result = HTTParty.get("http://omdbapi.com/?s=#{@movie}&apikey=2f6435d9").parsed_response['Search']
   if @result == nil
+    # Dont use REDIRECT, use erb: index
     redirect '/'
   elsif @result.length == 1
-    # ??????????????????? HOW THE FUCK DO YOU REDIRECT THIS
-
-    # redirect "/movie_details/#{@result[0]['Title']}" #THIS DOES NOT FFFUUUCCCCKKKIINNGGGG REDIRECT
-    # redirect "/movie_details?title=#{@result[0]['Title']}" #THIS DOES NOT FFFUUUCCCCKKKIINNGGGG REDIRECT
-    # redirect "/movie_details/#{params[:movie]}" #THIS DOES NOT FFFUUUCCCCKKKIINNGGGG REDIRECT
-
-    # redirect "/movie_details/Jaws"  #THIS REDIRECTS NO WORRIES
-    redirect "/movie_details/#{URI.escape(@result[0]['Title'])}"  #THIS DOES NOT FFFUUUCCCCKKKIINNGGGG REDIRECT
+    redirect "/movie_details/#{URI.escape(@result[0]['Title'])}"
   else
 
     erb :movies

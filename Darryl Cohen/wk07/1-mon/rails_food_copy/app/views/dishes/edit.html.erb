@@ -1,0 +1,15 @@
+<h1>Editing </h1>
+
+<form action="/dishes/<%= @dish.id %>" method="post">
+
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for="">Title</label>
+  <input type="text" name="title" value="<%= @dish.title %>">
+
+  <label for="">Picture</label>
+  <textarea name="pic_image" ><%= @dish.pic_image %></textarea>
+
+  <button>Submit</button>
+
+</form>

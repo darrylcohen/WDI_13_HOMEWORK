@@ -1,0 +1,9 @@
+<a href="/dishes/new">New</a>
+<% if @dishes != nil %>
+  <% @dishes.each do |dish| %>
+    <h2><a href="/dishes/<%= dish.id %>"><%= dish.title %> </a></h2>
+    <div class="pic">
+      <img src="<%= dish.pic_image %>" alt="">
+    </div>
+  <% end %>
+<% end %>

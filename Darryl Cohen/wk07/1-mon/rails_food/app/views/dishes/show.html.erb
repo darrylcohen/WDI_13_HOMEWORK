@@ -1,0 +1,32 @@
+<a href="/dishes/<%= @dish.id %>/edit">Edit</a>
+<form action="/dishes/<%= @dish.id %>" method = "post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <button>Delete</button>
+</form>
+
+<h1><%= @dish.title %></h1>
+<div class="pic">
+  <img src="<%= @dish.pic_image %>" alt="">
+</div>
+<h2> <%= @venue %> </h2>
+
+<%= form_tag '/comments', method: 'post' do %>
+  <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+  <label for="">comment</label>
+  <textarea name="content" ></textarea>
+
+  <button>Post Comment</button>
+<% end %>
+
+<!-- <form action="/comments" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+</form> -->
+
+<% @comments.each do |comment| %>
+
+  <p><%= comment.content %></p>
+
+<% end %>
