@@ -9,6 +9,8 @@ $('button').on('click', function(){
   }).done(function(resp) {
     debugger
     $results = $('.results')
+    $results.empty()
+    
     resp.Search.forEach(function(aSearch){
       $h2 = $('<h2>')
       $a = $('<a>').text(aSearch.Title)
@@ -17,6 +19,7 @@ $('button').on('click', function(){
       $h2.append($a)
       $results.append( $h2 )
     })
+
   }).fail(function() {
     console.log('whatever error');
   })
