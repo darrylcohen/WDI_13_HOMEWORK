@@ -10,10 +10,11 @@ $('button').on('click', function(){
     debugger
     $results = $('.results')
     $results.empty()
-    
+
     resp.Search.forEach(function(aSearch){
       $h2 = $('<h2>')
       $a = $('<a>').text(aSearch.Title)
+      debugger
       $a.attr("href", aSearch.Poster)
       $a.attr("target", "_blank")
       $h2.append($a)
